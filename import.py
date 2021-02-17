@@ -1,15 +1,12 @@
-#conding=utf8  
-import os 
+import os
 from fontforge import *
 
-g = os.walk("./fz_svg")  
-font=font()
+oldFont = open('./fz.ttf')
+newFont=font()
 
-for path,dir_list,file_list in g:  
-    for file_name in file_list:  
-    	print(file_name)
-    	[ucd,name]=file_name[:-4].split('_')
-    	glyph=font.createChar(int(ucd),name)
-    	glyph.importOutlines("./fz_svg/"+file_name)
-
-font.generate("output.ttf")
+for glyph in oldFont:
+    if oldFont[glyph].isWorthOutputting():
+    	newGlyph=newFont.createChar(oldFont[glyph].unicode,oldFont[glyph].glyphname)
+    	newGlyph.importOutlines("./fz_svg/"+str(oldFont[glyph].unicode)+"_"+oldFont[glyph].glyphname+".svg")
+    	newGlyph.width=oldFont[glyph].width
+newFont.generate("out.ttf")
