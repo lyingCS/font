@@ -1,5 +1,7 @@
 # font
 
+thanks to Dai dalao's algorithm
+
 ## Usage
 
     //export .bmp files from fz.ttf to ./fz_bmp
