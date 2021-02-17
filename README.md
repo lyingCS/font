@@ -11,5 +11,5 @@
     //convert from ./fz_out/*.bmp to ./fz_svg/*.svg
     python bmp2svg.py
     
-    //import from ./fz_svg/*svg to .ttf
+    //import from ./fz_svg/*svg to output.ttf
     ffpython import.py
