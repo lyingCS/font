@@ -2,14 +2,14 @@
 
 ## Usage
 
-    //export .bmp files to ./fz_bmp
+    //export .bmp files from fz.ttf to ./fz_bmp
     ffpython export.py        
     
-    //fontProcessing to ./fz_out
+    //fontProcessing from ./fz_bmp/*.bmp to ./fz_out/*.bmp
     python fontProcessing.py
     
-    //convert .bmp to .svg to ./fz_svg
+    //convert from ./fz_out/*.bmp to ./fz_svg/*.svg
     python bmp2svg.py
     
-    //import .cvg files to .ttf
+    //import from ./fz_svg/*svg to .ttf
     ffpython import.py
