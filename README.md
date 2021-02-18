@@ -23,7 +23,7 @@ pip install hashlib
 + ./fontProcessing.py对./fz_bmp下的所有.bmp文件按照算法处理后图片导入到./fz_out文件夹下(./imgFunctions.py封装函数)
 + ./bmp2svg.py使用./potrace/potrace.exe工具把./fz_out下的所有.bmp文件转换为.svg格式放到./fz_svg文件夹下
 + ./import.py根据./fz_svg下的所有图片创造新的字体
-+ 
+
 ## Usage
 
     ffpython export.py        
